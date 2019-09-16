@@ -1,4 +1,25 @@
 PipelineSecrets: {}
+cbcore:
+  OperationsCenter:
+    CSRF:
+      ProxyCompatibility: true
+    HostName: cbcore.anatidae.gcp.sharpwit.net
+    Ingress:
+      Annotations:
+        certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+        kubernetes.io/ingress.class: nginx
+        kubernetes.io/tls-acme: "false"
+        nginx.ingress.kubernetes.io/app-root: https://$best_http_host/cjoc/teams-check/
+        nginx.ingress.kubernetes.io/proxy-body-size: 50m
+        nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
+        nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      # tls:
+      #   Enable: true
+      #   Host: cbcore.anatidae.gcp.sharpwit.net
+      #   SecretName: tls-cbcore-anatidae-gcp-sharpwit-net
+    ServiceType: ClusterIP
+  nginx-ingress:
+    Enabled: false
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
