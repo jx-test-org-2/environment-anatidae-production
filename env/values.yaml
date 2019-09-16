@@ -1,8 +1,6 @@
 PipelineSecrets: {}
 cbcore:
   OperationsCenter:
-    CSRF:
-      ProxyCompatibility: true
     HostName: cbcore.anatidae.gcp.sharpwit.net
     Ingress:
       Annotations:
