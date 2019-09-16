@@ -1,13 +1,16 @@
 dependencies:
-- name: exposecontroller
-  version: 2.3.89
-  repository: http://chartmuseum.jenkins-x.io
-  alias: expose
-- name: exposecontroller
-  version: 2.3.89
-  repository: http://chartmuseum.jenkins-x.io
-  alias: cleanup
-- name: cloudbees-core
-  version: 3.4.0
+- alias: cbcore
+  name: cloudbees-core
   repository: https://charts.cloudbees.com/public/cloudbees
-  alias: cbcore
+  version: 3.4.0
+- alias: expose
+  name: exposecontroller
+  repository: http://chartmuseum.jenkins-x.io
+  version: 2.3.89
+- alias: cleanup
+  name: exposecontroller
+  repository: http://chartmuseum.jenkins-x.io
+  version: 2.3.89
+- name: spring-boot-1
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.2
