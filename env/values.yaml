@@ -10,10 +10,10 @@ cbcore:
         nginx.ingress.kubernetes.io/proxy-body-size: 50m
         nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
         nginx.ingress.kubernetes.io/ssl-redirect: "true"
-      # tls:
-      #   Enable: true
-      #   Host: cbcore.anatidae.gcp.sharpwit.net
-      #   SecretName: tls-cbcore-anatidae-gcp-sharpwit-net
+      tls:
+        Enable: true
+        Host: cbcore.anatidae.gcp.sharpwit.net
+        SecretName: tls-cbcore-anatidae-gcp-sharpwit-net
     ServiceType: ClusterIP
   nginx-ingress:
     Enabled: false
